@@ -1,7 +1,7 @@
 import { GitbookLoader } from 'langchain/document_loaders/web/gitbook'
 import { CharacterTextSplitter } from 'langchain/text_splitter'
 
-const readDataFromGitbook = async (gitbookUrl: string) => {
+const readGitbookData = async (gitbookUrl: string) => {
     const urlLoader = new GitbookLoader(gitbookUrl, {
         shouldLoadAllPaths: true
     })
@@ -14,4 +14,4 @@ const readDataFromGitbook = async (gitbookUrl: string) => {
     return { texts }
 }
 
-export { readDataFromGitbook }
+export { readGitbookData }
