@@ -13,6 +13,13 @@ const loadDocument = async (url) => {
 }
 
 app.post('/api/load', async (req, res) => {
-    const { url } = await req.body
-    const docs = await loadDocument(url)
+    try {
+        const { url } = await req.body
+        const docs = await loadDocument(url)
+        // add docs to vector db
+        res.status(200).json({ message: 'Successfully Created DB '})
+    }
+    catch(err){
+        res.status(500).json({ err })
+    }
 })
