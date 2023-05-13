@@ -1,3 +1,5 @@
+import { Request, Response } from "express"
+
 const { GitbookLoader } = require('langchain/document_loaders/web/gitbook')
 const express = require('express')
 const app = express()
@@ -6,13 +8,13 @@ app.use(express.json())
 
 app.listen(PORT, () => console.log(`${PORT}`))
 
-const loadDocument = async (url) => {
+const loadDocument = async (url: string) => {
     const loader = new GitbookLoader(url, { shouldLoadAllPaths: true })
     const docs = await loader.load()
     console.log(docs)
 }
 
-app.post('/api/load', async (req, res) => {
+app.post('/api/load', async (req: Request, res: Response) => {
     try {
         const { url } = await req.body
         const docs = await loadDocument(url)
