@@ -20,6 +20,13 @@
   resolved "https://registry.yarnpkg.com/@fortaine/fetch-event-source/-/fetch-event-source-3.0.6.tgz#b8552a2ca2c5202f5699b93a92be0188d422b06e"
   integrity sha512-621GAuLMvKtyZQ3IA6nlDWhV1V/7PGOTNIGLUifxt0KzM+dZIweJ6F3XvQF3QnqeNfS1N7WQ0Kil1Di/lhChEw==
 
+"@pinecone-database/pinecone@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@pinecone-database/pinecone/-/pinecone-0.1.5.tgz#a1bd5ab13a875496a73354127f875471df5f625e"
+  integrity sha512-Amkc6JFjhRzKqf5GkdI2Pd4H7+EqUtNp7kaJdCSgDT2PG2cokx+bGyRBWzrkYD7Kwo5jtWaPNWcblysEUPWCVg==
+  dependencies:
+    cross-fetch "^3.1.5"
+
 "@types/body-parser@*":
   version "1.19.2"
   resolved "https://registry.yarnpkg.com/@types/body-parser/-/body-parser-1.19.2.tgz#aea2059e28b7658639081347ac4fab3de166e6f0"
