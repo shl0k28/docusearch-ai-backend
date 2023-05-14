@@ -2,6 +2,7 @@ import { PineconeClient } from '@pinecone-database/pinecone'
 import { Document } from 'langchain/document'
 import { OpenAIEmbeddings } from 'langchain/embeddings/openai'
 import { PineconeStore } from 'langchain/vectorstores/pinecone'
+import { config } from 'dotenv'
 
 const uploadDataToPinecone = async (docs: Document<Record<string, any>>[]) => {
     const embeddings = new OpenAIEmbeddings({
