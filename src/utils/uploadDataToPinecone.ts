@@ -4,6 +4,8 @@ import { OpenAIEmbeddings } from 'langchain/embeddings/openai'
 import { PineconeStore } from 'langchain/vectorstores/pinecone'
 import { config } from 'dotenv'
 
+config()
+
 const uploadDataToPinecone = async (docs: Document<Record<string, any>>[]) => {
     const embeddings = new OpenAIEmbeddings({
         openAIApiKey: process.env.OPENAI_API_KEY

@@ -32,6 +32,7 @@ app.post('/api/load', async (req, res) => {
         res.status(200).json({ message: 'Successfully Created DB '})
     }
     catch(err){
+        console.log(err)
         res.status(500).json({ err })
     }
 })
@@ -43,6 +44,7 @@ app.post('/api/query', async (req, res) => {
         res.status(200).json({ response })
     }
     catch(err){
+        console.log(err)
         res.status(500).json({ err })
     }
 })
