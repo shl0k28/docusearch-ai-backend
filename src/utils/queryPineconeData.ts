@@ -29,6 +29,7 @@ const queryPineconeData = async (query: string) => {
     });
     const response = await chain.call({ query });
     console.log(response);
+    return response
 }
 
 export { queryPineconeData }
